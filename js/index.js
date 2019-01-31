@@ -39,15 +39,17 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
+document.querySelector('nav').id ='navi';
+let anchors = document.getElementsByTagName('a');
 
-let nav = document.getElementsByTagName('nav');
-let anchor = document.querySelectorAll('a');
+
 
 let ctaDiv = document.getElementsByClassName('cta-text');
 
 
 let headingOne = document.querySelector('h1');
-let button = document.getElementsByTagName('button');
+document.querySelector('button').id = "startedBtn";
+
 let ctaImg = document.getElementById('cta-img');
 
 let textContent = document.getElementsByClassName('text-content');
@@ -61,16 +63,48 @@ ctaImg.src = "img/header-img.png";
 midImg.src = "img/mid-page-accent.jpg";
 
 //Navigation
-anchor[0].textContent = "Services";
-anchor[1].textContent = "Product";
-anchor[2].textContent = "Vision";
-anchor[3].textContent = "Features";
-anchor[4].textContent = "About";
-anchor[5].textContent = "Contact";
+anchors[0].textContent = "Services";
+anchors[0].style.color = "green";
+
+anchors[1].textContent = "Product";
+anchors[1].style.color = "green";
+
+anchors[2].textContent = "Vision";
+anchors[2].style.color = "green";
+
+anchors[3].textContent = "Features";
+anchors[3].style.color = "green";
+
+anchors[4].textContent = "About";
+anchors[4].style.color = "green";
+
+anchors[5].textContent = "Contact";
+anchors[5].style.color = "green";
+
+let anchorOne = document.createElement('A');
+anchorOne.textContent ='Reviews';
+anchorOne.setAttribute('href', '#');
+anchorOne.style.color = 'green';
+
+let anchorTwo = document.createElement('A');
+anchorTwo.textContent = 'Blog';
+anchorTwo.href = "#";
+anchorTwo.style.color = 'green';
+
+navi.prepend(anchorTwo);
+navi.appendChild(anchorOne);
+
+
+
 
 //CTA
-headingOne.textContent = 'Dom is Awesome';
-button.textContent = 'Get Started';
+headingOne.style = 'white-space: pre';
+headingOne.textContent = "Dom \r \n";
+headingOne.textContent += 'Is \r\n';
+headingOne.textContent += 'Awesome';
+
+
+startedBtn.textContent = 'Get Started';
 
 //Main Content
 headingFour[0].textContent = 'Features';
@@ -90,9 +124,11 @@ headingFour[4].textContent = 'Vision';
 para[4].textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et.Suspendisse vel tempus odio, in interdutm nisi.Suspendisse eu ornare nisl.Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
 
 headingFour[5].textContent = 'Contact';
-para[5].textContent = "123 Way 456 Street" +  " Somewhere, USA";
+para[5].style = 'white-space: pre'
+para[5].textContent = "123 Way 456 Street \r\n";
+para[5].textContent += "Somewhere, USA";
 para[6].textContent = '1 (888) 888-8888';
 para[7].textContent = 'sales@greatidea.io';
 
 para[8].textContent = 'Copyright Great Idea! 2018';
-console.log(headingFour);
+console.log(anchors);
