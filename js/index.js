@@ -131,4 +131,3 @@ para[6].textContent = '1 (888) 888-8888';
 para[7].textContent = 'sales@greatidea.io';
 
 para[8].textContent = 'Copyright Great Idea! 2018';
-console.log(anchors);
